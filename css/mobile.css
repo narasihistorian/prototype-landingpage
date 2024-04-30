@@ -1,0 +1,201 @@
+/* font used */
+
+@font-face {
+  font-family: 'DrukBoldTrial';
+  src: url('../assets/fonts/Druk-Bold-Trial.otf') format('truetype');
+}
+
+/* global style  */
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  /* colour */
+
+  --blackColor: black;
+  --blackvintage: #181d31;
+  --whiteColor: white;
+  --lightWhiteColor: rgb(220, 220, 220);
+  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+
+  /* font  */
+
+  --nelaSlabFont: 'NelaSlabMedium';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* lenis scrool css setup  ------------------------------------------*/
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* navbar --------------------------------------------------------------- */
+
+.burger {
+  padding-right: 2rem;
+}
+
+.burger span {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-navbar li {
+  padding: 3rem 0;
+}
+
+.menu-navbar li a {
+  font-size: calc(1.5rem + 1vw);
+}
+
+/* hero sections */
+
+.logo-navbar,
+.logo-navbar a {
+  font-size: calc(2rem + 1vw);
+}
+
+/* hero sections */
+
+.main-home h2 {
+  font-size: calc(6rem + 1vw);
+  padding: 0 5rem;
+}
+
+.main-home h3 {
+  font-size: calc(1rem + 1vw);
+  padding: 2rem 5rem 5rem 5rem;
+}
+
+.main-home button {
+  font-size: calc(0.8rem + 1vw);
+}
+
+/* motto sections */
+
+.motto-container {
+  padding: 0 0 35% 0;
+}
+
+.motto-container h1 {
+  font-size: calc(4rem + 1vw);
+}
+
+.motto-container p {
+  font-size: calc(0.8rem + 1vw);
+}
+
+/* service  */
+
+.service-1,
+.service-3 {
+  flex-direction: column;
+  padding: 3rem 0;
+}
+
+.service-2 {
+  flex-direction: column-reverse;
+  padding: 15rem 0;
+}
+
+.service-1-description,
+.service-3-description {
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+.service-2-description {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+.service-1 img,
+.service-3 img {
+  width: 100%;
+}
+
+.service-2 img {
+  width: 100%;
+}
+
+.service-1 h1,
+.service-2 h1,
+.service-3 h1 {
+  font-size: calc(6rem + 1vw);
+}
+
+.service-1 p,
+.service-2 p,
+.service-3 p {
+  font-size: calc(0.8rem + 1vw);
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+.service-1-description button,
+.service-2-description button,
+.service-3-description button {
+  font-size: calc(0.8rem + 1vw);
+}
+
+/* booking sections */
+
+#booking {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 0;
+}
+
+.background-video-booking2 {
+  width: 120vw;
+  height: 130vh;
+}
+
+.main-booking h1 {
+  font-size: calc(7rem + 1vw);
+  text-align: center;
+}
+
+.main-booking p {
+  font-size: calc(0.8rem + 1vw);
+  padding: 5rem 0;
+}
+
+.main-booking button {
+  font-size: calc(0.8rem + 1vw);
+}

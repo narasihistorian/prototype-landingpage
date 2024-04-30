@@ -1,0 +1,93 @@
+/* font used */
+
+@font-face {
+  font-family: 'DrukBoldTrial';
+  src: url('../assets/fonts/Druk-Bold-Trial.otf') format('truetype');
+}
+
+/* global style  */
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  /* colour */
+
+  --blackColor: black;
+  --blackvintage: #181d31;
+  --whiteColor: white;
+  --lightWhiteColor: rgb(220, 220, 220);
+  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+
+  /* font  */
+
+  --nelaSlabFont: 'NelaSlabMedium';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* lenis scrool css setup  ------------------------------------------*/
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* hero sections */
+
+.main-home h2 {
+  font-size: calc(10rem + 1vw);
+}
+
+.main-home h3 {
+  font-size: calc(0.3rem + 1vw);
+}
+
+.main-home button {
+  padding: 1rem 3rem;
+  font-size: calc(0.3rem + 1vw);
+}
+
+/* motto sections */
+
+.motto-container h1 {
+  font-size: calc(5rem + 1vw);
+}
+
+/* service  */
+
+.service-1 h1,
+.service-2 h1,
+.service-3 h1 {
+  font-size: calc(5rem + 1vw);
+}
+
+/* hero sections */
+
+.main-booking h1 {
+  font-size: calc(5rem + 1vw);
+}

@@ -1,0 +1,270 @@
+/* font used */
+
+@font-face {
+  font-family: 'DrukBoldTrial';
+  src: url('../assets/fonts/Druk-Bold-Trial.otf') format('truetype');
+}
+
+/* global style  */
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  /* colour */
+
+  --blackColor: black;
+  --blackvintage: #181d31;
+  --whiteColor: white;
+  --lightWhiteColor: rgb(220, 220, 220);
+  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+
+  /* font  */
+
+  --nelaSlabFont: 'NelaSlabMedium';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* lenis scrool css setup  ------------------------------------------*/
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* navbar --------------------------------------------------------------- */
+
+nav {
+  left: 0;
+  width: 100vw;
+}
+
+.logo-navbar {
+  font-size: calc(2rem + 1vw);
+}
+
+/* burger menu ---------------------------------------------------------- */
+
+.burger {
+  position: relative;
+  display: block;
+  padding-right: 5rem;
+}
+
+.burger span {
+  padding: 0.1rem 1rem;
+  background: rgb(255, 255, 255);
+  margin: 0.3rem 0rem;
+  display: block;
+  transition: all 0.5s ease;
+  width: 200%;
+  height: 200%;
+}
+
+.menu-navbar {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30, 24, 24, 0.1);
+  backdrop-filter: blur(50px);
+  transform: scaleY(0);
+  transform-origin: center;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-navbar li {
+  padding: 5rem 0;
+  border-bottom: 2px solid white;
+  opacity: 0;
+}
+
+.menu-navbar li a {
+  font-size: calc(4rem + 1vw);
+  color: rgb(255, 255, 255);
+}
+
+/* navbar sections */
+
+.logo-navbar,
+.logo-navbar a {
+  font-size: calc(3rem + 1vw);
+}
+
+/* home sections */
+
+.main-home h2 {
+  font-size: calc(9rem + 1vw);
+}
+
+.main-home h3 {
+  font-size: calc(1rem + 1vw);
+}
+
+.main-home button {
+  padding: 1rem 3rem;
+  font-size: calc(1rem + 1vw);
+}
+
+/* motto sections */
+
+.background-motto {
+  width: 120%;
+  height: 100%;
+}
+
+.motto-container {
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 35% 0;
+}
+
+.motto-container h1 {
+  font-size: calc(8rem + 1vw);
+}
+
+.motto-container p {
+  font-size: calc(1rem + 1vw);
+  width: 75vw;
+  text-align: center;
+}
+
+/* service  */
+
+.service-1,
+.service-3 {
+  flex-direction: column;
+  padding: 3rem 0;
+}
+
+.service-2 {
+  flex-direction: column-reverse;
+  padding: 15rem 0;
+}
+
+.service-1-description,
+.service-3-description {
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+.service-2-description {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+}
+
+.service-1 img,
+.service-3 img {
+  width: 80%;
+  right: 0;
+}
+
+.service-2 img {
+  width: 80%;
+  left: 0;
+}
+
+.service-1 h1,
+.service-2 h1,
+.service-3 h1 {
+  font-size: calc(7rem + 1vw);
+  padding-top: 2rem;
+}
+
+.service-1 p,
+.service-2 p,
+.service-3 p {
+  font-size: calc(1rem + 1vw);
+  padding: 3rem 10rem 3rem 10rem;
+}
+
+.service-1-description button,
+.service-2-description button,
+.service-3-description button {
+  font-size: calc(1rem + 1vw);
+}
+
+/* booking sections */
+
+#booking {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 0;
+}
+
+.background-video-booking {
+  display: none;
+}
+
+.background-video-booking2 {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.main-booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20% 0;
+}
+
+.main-booking h1 {
+  font-size: calc(8rem + 1vw);
+}
+
+.main-booking p {
+  font-size: calc(1rem + 1vw);
+  width: 70%;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.main-booking button {
+  font-size: calc(1rem + 1vw);
+}

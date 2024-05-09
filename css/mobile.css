@@ -1,8 +1,8 @@
 /* font used */
 
 @font-face {
-  font-family: 'DrukBoldTrial';
-  src: url('../assets/fonts/Druk-Bold-Trial.otf') format('truetype');
+  font-family: "DrukBoldTrial";
+  src: url("../assets/fonts/Druk-Bold-Trial.otf") format("truetype");
 }
 
 /* global style  */
@@ -22,7 +22,7 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
+  --nelaSlabFont: "NelaSlabMedium";
 }
 
 * {
@@ -85,18 +85,14 @@ html.lenis {
 
 /* hero sections */
 
-.main-home h2 {
+.main-home h1 {
   font-size: calc(6rem + 1vw);
   padding: 0 5rem;
 }
 
 .main-home h3 {
-  font-size: calc(1rem + 1vw);
-  padding: 2rem 5rem 5rem 5rem;
-}
-
-.main-home button {
   font-size: calc(0.8rem + 1vw);
+  padding: 2rem 5rem 3rem 5rem;
 }
 
 /* motto sections */
@@ -106,11 +102,12 @@ html.lenis {
 }
 
 .motto-container h1 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .motto-container p {
   font-size: calc(0.8rem + 1vw);
+  line-height: 2rem;
 }
 
 /* service  */
@@ -145,32 +142,18 @@ html.lenis {
   width: 80%;
 }
 
-.service-1 img,
-.service-3 img {
-  width: 100%;
-}
-
-.service-2 img {
-  width: 100%;
-}
-
 .service-1 h1,
 .service-2 h1,
 .service-3 h1 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
 .service-1 p,
 .service-2 p,
 .service-3 p {
   font-size: calc(0.8rem + 1vw);
-  padding: 3rem 3rem 3rem 3rem;
-}
-
-.service-1-description button,
-.service-2-description button,
-.service-3-description button {
-  font-size: calc(0.8rem + 1vw);
+  padding: 3rem 0rem 3rem 0rem;
+  line-height: 2rem;
 }
 
 /* booking sections */
@@ -187,13 +170,14 @@ html.lenis {
 }
 
 .main-booking h1 {
-  font-size: calc(7rem + 1vw);
+  font-size: calc(4rem + 1vw);
   text-align: center;
 }
 
 .main-booking p {
   font-size: calc(0.8rem + 1vw);
   padding: 5rem 0;
+  line-height: 2rem;
 }
 
 .main-booking button {

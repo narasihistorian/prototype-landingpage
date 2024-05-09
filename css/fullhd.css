@@ -1,8 +1,32 @@
 /* font used */
 
 @font-face {
-  font-family: 'DrukBoldTrial';
-  src: url('../assets/fonts/Druk-Bold-Trial.otf') format('truetype');
+  font-family: "MonaSansLight";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 100%;
+}
+
+@font-face {
+  font-family: "MonaSansLightNarrow";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200;
+  font-stretch: 75%;
+}
+
+@font-face {
+  font-family: "MonaSansBold";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 500;
+  font-stretch: 125%;
+}
+
+@font-face {
+  font-family: "DrukBoldTrial";
+  src: url("../assets/fonts/Druk-Bold-Trial.otf") format("truetype");
 }
 
 /* global style  */
@@ -21,8 +45,10 @@
 
   /* font  */
 
-  --nelaSlabFont: 'NelaSlabMedium';
-  --drukBoldTrial: 'DrukBoldTrial';
+  --drukBoldTrial: "DrukBoldTrial";
+  --monasansLightNarrow: "MonaSansLightNarrow";
+  --monaSansLight: "MonaSansLight";
+  --monaSansBold: "MonaSansBold";
 }
 
 * {
@@ -33,7 +59,7 @@
 
 body {
   overflow-x: hidden;
-  /* background: #212343; */
+  background: #212343;
 }
 
 /* lenis scrool css setup  ------------------------------------------*/
@@ -71,27 +97,24 @@ nav {
   z-index: 20;
 }
 
-.logo-mask {
-  overflow: hidden;
-}
-
+.logo-mask,
 .bg-navbar {
   overflow: hidden;
 }
 
 .logo-navbar,
 .logo-navbar a {
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
   color: var(--darkWhiteColor);
   text-decoration: none;
-  font-family: 'Italianno', cursive;
+  font-family: "Italianno", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
 .menu-navbar {
   padding: 1rem 3rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
   transform: translateY(100%);
@@ -105,45 +128,20 @@ nav {
 }
 
 .menu-navbar li a {
-  font-size: calc(0.6rem + 0.5vw);
+  font-size: calc(0.3rem + 1vw);
   color: var(--darkWhiteColor);
   text-decoration: none;
 }
 
 .menu-navbar li a:hover {
-  color: rgb(125, 173, 231);
+  color: rgb(223, 233, 32);
 }
 
 .burger {
   display: none;
 }
 
-/* hero sections */
-
-#home {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  min-height: 100vh;
-  width: 100vw;
-}
-
-.background-video {
-  position: absolute;
-  width: 100vw;
-  height: 1vh;
-  object-fit: cover;
-  left: 0;
-  right: 0;
-  bottom: 45%;
-  z-index: 1;
-  border: 1px solid white;
-  transform: scaleX(0);
-  transform-origin: center;
-}
+/* animation main home  */
 
 .bg-container {
   position: absolute;
@@ -164,7 +162,7 @@ nav {
 .title-animation-1 h1 {
   font-size: calc(3rem + 1vw);
   color: var(--darkWhiteColor);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   visibility: hidden;
@@ -179,68 +177,63 @@ nav {
 }
 
 .title-animation-2 h1 {
-  display: none;
   font-size: calc(3rem + 1vw);
   color: var(--darkWhiteColor);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  visibility: hidden;
-}
-
-.title-animation-3 {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 4;
-}
-
-.title-animation-3 h1 {
-  display: none;
-  font-size: calc(3rem + 1vw);
-  color: var(--darkWhiteColor);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   opacity: 0;
 }
 
-.main-title-container {
-  position: absolute;
+/* home sections */
+
+#home {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
-.main-title-mask,
-.sub-title-mask {
+.background-video {
+  position: absolute;
+  width: 100vw;
+  height: 1vh;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  bottom: 45%;
+  z-index: 1;
+  border: 1px solid white;
+  transform: scaleX(0);
+  transform-origin: center;
+}
+
+.main-title-container {
   position: relative;
-  overflow: hidden;
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--darkWhiteColor);
+  padding-top: 5rem;
 }
 
 .main-title-mask,
 .sub-title-mask,
 .main-home button {
-  position: relative;
-  z-index: 4;
+  overflow: hidden;
+  z-index: 3;
 }
 
-.main-home h2 {
-  position: relative;
+.main-home h1 {
   font-family: var(--drukBoldTrial);
   font-size: calc(12rem + 1vw);
   letter-spacing: 0.2rem;
-  font-weight: 700;
-  font-style: normal;
-  color: var(--darkWhiteColor);
   transform: translateX(-100%);
   transform-origin: left;
   opacity: 0.5;
@@ -248,19 +241,16 @@ nav {
 
 .main-home h3 {
   position: relative;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: var(--monaSansLight);
   font-size: calc(0.5rem + 1vw);
-  padding: 1rem 0 3rem 0;
-  color: var(--darkWhiteColor);
+  padding: 1rem 0 5rem 0;
   transform: translateY(80%);
   transform-origin: bottom;
-  opacity: 0.5;
+  opacity: 0;
 }
 
 .main-home button {
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   background: none;
   font-size: calc(0.5rem + 1vw);
   cursor: pointer;
@@ -305,8 +295,8 @@ nav {
 
 .motto-container h1 {
   font-family: var(--drukBoldTrial);
-  font-size: calc(6rem + 1vw);
-  letter-spacing: 0.3rem;
+  font-size: calc(10rem + 1vw);
+  letter-spacing: 0.5rem;
   padding-bottom: 2rem;
   display: flex;
 }
@@ -316,12 +306,10 @@ nav {
 }
 
 .motto-container p {
-  font-size: calc(0.7rem + 0.5vw);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 3rem;
-  width: 70vw;
+  font-size: calc(0.3rem + 1vw);
+  font-family: var(--monaSansLight);
+  width: 80%;
+  line-height: 4rem;
 }
 
 /* service  */
@@ -368,7 +356,7 @@ nav {
   background: none;
   color: var(--darkWhiteColor);
   padding: 1rem 4rem;
-  font-size: calc(0.3rem + 1vw);
+  font-size: calc(1rem + 0.5vw);
   cursor: pointer;
   border-radius: 1rem;
   border: 2px solid white;
@@ -393,19 +381,18 @@ nav {
 .service-2 h1,
 .service-3 h1 {
   font-family: var(--drukBoldTrial);
-  font-size: calc(6rem + 1vw);
+  font-size: calc(8rem + 1vw);
   padding-top: 2rem;
+  letter-spacing: 0.3rem;
 }
 
 .service-1 p,
 .service-2 p,
 .service-3 p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(0.7rem + 0.5vw);
-  line-height: 3rem;
-  padding: 3rem 10rem 3rem 0;
+  font-family: var(--monaSansLight);
+  font-size: calc(0.3rem + 1vw);
+  line-height: 4rem;
+  padding: 3rem 0 5rem 0;
 }
 
 /* hero sections */
@@ -441,22 +428,20 @@ nav {
   font-family: var(--drukBoldTrial);
   font-weight: 700;
   font-style: normal;
-  font-size: calc(6rem + 1vw);
+  font-size: calc(8rem + 1vw);
 }
 
 .main-booking p {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(0.7rem + 0.5vw);
-  line-height: 3rem;
+  font-family: var(--monaSansLight);
+  font-size: calc(0.3rem + 1vw);
+  line-height: 4rem;
   padding: 5rem 0;
 }
 
 .main-booking button {
   padding: 1rem 3rem;
   background: none;
-  font-size: calc(0.3rem + 1vw);
+  font-size: calc(1rem + 0.5vw);
   cursor: pointer;
   color: var(--darkWhiteColor);
   border-radius: 1rem;

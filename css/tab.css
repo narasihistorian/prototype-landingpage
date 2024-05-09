@@ -150,6 +150,7 @@ nav {
 .motto-container {
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 0 0 25% 0;
 }
 
@@ -160,7 +161,6 @@ nav {
 .motto-container p {
   font-size: calc(1rem + 1vw);
   width: 75vw;
-  text-align: center;
 }
 
 /* service  */

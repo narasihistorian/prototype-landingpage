@@ -102,12 +102,17 @@ nav {
   overflow: hidden;
 }
 
-.logo-navbar,
+.logo-navbar {
+  transform: translateX(-100%);
+  transform-origin: left;
+  opacity: 0;
+}
+
 .logo-navbar a {
   font-size: calc(2.5rem + 1vw);
   color: var(--darkWhiteColor);
-  text-decoration: none;
   font-family: "Italianno", cursive;
+  text-decoration: none;
   font-weight: 400;
   font-style: normal;
 }
@@ -291,24 +296,20 @@ nav {
   height: 100%;
   padding: 0 0 18% 5%;
   z-index: 2;
+  color: var(--darkWhiteColor);
 }
 
 .motto-container h1 {
   font-family: var(--drukBoldTrial);
   font-size: calc(10rem + 1vw);
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
   padding-bottom: 2rem;
-  display: flex;
-}
-
-.highlight1 {
-  color: rgb(233, 233, 104);
 }
 
 .motto-container p {
   font-size: calc(0.3rem + 1vw);
   font-family: var(--monaSansLight);
-  width: 80%;
+  width: 70%;
   line-height: 4rem;
 }
 
@@ -321,6 +322,7 @@ nav {
   background: #212343;
   color: var(--darkWhiteColor);
   padding: 10% 0;
+  color: var(--darkWhiteColor);
 }
 
 .service-container {
@@ -383,7 +385,7 @@ nav {
   font-family: var(--drukBoldTrial);
   font-size: calc(8rem + 1vw);
   padding-top: 2rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
 }
 
 .service-1 p,

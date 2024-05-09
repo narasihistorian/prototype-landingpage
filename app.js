@@ -201,20 +201,27 @@ matchMediaResponsive.add(
         "<"
       );
       tl.to(".main-home button", { scaleY: 1, duration: 0.5 }, "-=.9");
-      tl.from(
+
+      tl.to(
         ".logo-navbar",
         {
-          x: isMobile ? 0 : "-100%",
-          opacity: isMobile ? 1 : 0.5,
-          duration: 0.5,
+          x: "0%",
+          duration: 1,
+          opacity: 1,
         },
-        "-=.7"
+        "<"
       );
-      tl.to(".menu-navbar", { y: 0 }, "-=.7");
+
+      tl.to(".menu-navbar", { y: 0, duration: 1 }, "-=.7");
       tl.to(".fade-container", { display: "none" }, "-=.7");
 
       tl.to(["#motto", "#service", "#booking"], { display: "block" });
     } else {
+      gsap.set(".logo-navbar", {
+        opacity: 1,
+        x: "0%",
+      });
+
       gsap.set(".background-video", {
         height: "100vh",
         top: 0,
@@ -263,8 +270,7 @@ matchMediaResponsive.add(
 
     // Description sections -----------------------------------------
 
-    const mainTextMottoSections = new SplitType(".highlight");
-    const mainText2MottoSections = new SplitType(".highlight1");
+    const mainTextMottoSections = new SplitType(".motto-container h1");
 
     const tlMottoSections = gsap.timeline({
       scrollTrigger: {
@@ -286,8 +292,7 @@ matchMediaResponsive.add(
       default: { ease: "power3.out", duration: 2 },
     });
 
-    gsap.set(".highlight", { autoAlpha: 1 });
-    gsap.set(".highlight1", { autoAlpha: 1 });
+    gsap.set(".motto-container h1", { autoAlpha: 1 });
 
     tlMottoSections.from(".background-motto", { opacity: 0, duration: 1 });
 
@@ -301,18 +306,6 @@ matchMediaResponsive.add(
         duration: 0.8,
       },
       "-=.5"
-    );
-
-    tlMottoSections.from(
-      mainText2MottoSections.chars,
-      {
-        y: isMobile ? 0 : 40,
-        opacity: isMobile ? 1 : 0,
-        skewX: isMobile ? 0 : 30,
-        stagger: 0.03,
-        duration: 0.9,
-      },
-      "-=.8"
     );
 
     tlMottoSections.from(

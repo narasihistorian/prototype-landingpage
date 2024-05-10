@@ -57,14 +57,14 @@ html.lenis {
   pointer-events: none;
 }
 
-/* hero sections */
+/* home sections */
 
 .main-home h1 {
-  font-size: calc(10rem + 1vw);
+  font-size: calc(8rem + 1vw);
 }
 
 .main-home h3 {
-  font-size: calc(0.5rem + 1vw);
+  font-size: calc(0.3rem + 1vw);
 }
 
 .main-home button {
@@ -91,8 +91,7 @@ html.lenis {
 .service-1 h1,
 .service-2 h1,
 .service-3 h1 {
-  font-size: calc(6rem + 1vw);
-  letter-spacing: 0rem;
+  font-size: calc(5rem + 1vw);
 }
 
 .service-1 p,
@@ -105,7 +104,7 @@ html.lenis {
 /* hero sections */
 
 .main-booking h1 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(5rem + 1vw);
 }
 
 .main-booking p {

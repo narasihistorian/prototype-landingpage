@@ -265,8 +265,8 @@ nav {
 }
 
 .main-booking p {
-  font-size: calc(0.8rem + 1vw);
-  width: 70%;
+  font-size: calc(1rem + 1vw);
+  width: 80%;
   text-align: center;
   padding: 5rem 0;
 }

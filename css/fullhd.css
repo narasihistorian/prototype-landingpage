@@ -133,7 +133,7 @@ nav {
 }
 
 .menu-navbar li a {
-  font-size: calc(0.3rem + 1vw);
+  font-size: calc(0.2rem + 1vw);
   color: var(--darkWhiteColor);
   text-decoration: none;
 }
@@ -165,7 +165,7 @@ nav {
 }
 
 .title-animation-1 h1 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2rem + 1vw);
   color: var(--darkWhiteColor);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -182,7 +182,7 @@ nav {
 }
 
 .title-animation-2 h1 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2rem + 1vw);
   color: var(--darkWhiteColor);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -237,8 +237,7 @@ nav {
 
 .main-home h1 {
   font-family: var(--drukBoldTrial);
-  font-size: calc(12rem + 1vw);
-  letter-spacing: 0.2rem;
+  font-size: calc(10rem + 1vw);
   transform: translateX(-100%);
   transform-origin: left;
   opacity: 0.5;
@@ -301,8 +300,7 @@ nav {
 
 .motto-container h1 {
   font-family: var(--drukBoldTrial);
-  font-size: calc(10rem + 1vw);
-  letter-spacing: 0.2rem;
+  font-size: calc(8rem + 1vw);
   padding-bottom: 2rem;
 }
 
@@ -310,7 +308,7 @@ nav {
   font-size: calc(0.3rem + 1vw);
   font-family: var(--monaSansLight);
   width: 70%;
-  line-height: 4rem;
+  line-height: 3rem;
 }
 
 /* service  */
@@ -383,9 +381,8 @@ nav {
 .service-2 h1,
 .service-3 h1 {
   font-family: var(--drukBoldTrial);
-  font-size: calc(8rem + 1vw);
+  font-size: calc(6rem + 1vw);
   padding-top: 2rem;
-  letter-spacing: 0.2rem;
 }
 
 .service-1 p,
@@ -393,7 +390,7 @@ nav {
 .service-3 p {
   font-family: var(--monaSansLight);
   font-size: calc(0.3rem + 1vw);
-  line-height: 4rem;
+  line-height: 3rem;
   padding: 3rem 0 5rem 0;
 }
 
@@ -428,15 +425,13 @@ nav {
 .main-booking h1 {
   position: relative;
   font-family: var(--drukBoldTrial);
-  font-weight: 700;
-  font-style: normal;
-  font-size: calc(8rem + 1vw);
+  font-size: calc(6rem + 1vw);
 }
 
 .main-booking p {
   font-family: var(--monaSansLight);
   font-size: calc(0.3rem + 1vw);
-  line-height: 4rem;
+  line-height: 3rem;
   padding: 5rem 0;
 }
 

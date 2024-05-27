@@ -23,7 +23,7 @@ const links = nav.querySelectorAll(".menu-navbar li a");
 
 let menuStatus = false;
 
-// menu tlopen --------------------
+// menu tlopen --------------------------------------------------------------------
 
 const menuTLOpen = gsap.timeline({
   default: { duration: 0.5, ease: "power4.inOut" },
@@ -206,14 +206,13 @@ matchMediaResponsive.add(
         ".logo-navbar",
         {
           x: "0%",
-          duration: 1,
+          duration: 1.5,
           opacity: 1,
         },
         "<"
       );
 
-      tl.to(".menu-navbar", { y: 0, duration: 1 }, "-=.7");
-      tl.to(".fade-container", { display: "none" }, "-=.7");
+      tl.to(".menu-navbar", { y: 0, duration: 1.5 }, "-=.7");
 
       tl.to(["#motto", "#service", "#booking"], { display: "block" });
     } else {

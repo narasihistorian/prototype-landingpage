@@ -110,7 +110,7 @@ nav {
 }
 
 .menu-navbar li a {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(2rem + 1vw);
   color: rgb(255, 255, 255);
 }
 
@@ -118,7 +118,7 @@ nav {
 
 .logo-navbar,
 .logo-navbar a {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 /* home sections */
@@ -127,12 +127,16 @@ nav {
   border: none;
 }
 
+.main-title-container {
+  padding-top: 20rem;
+}
+
 .main-home h1 {
   font-size: calc(8rem + 1vw);
 }
 
 .main-home h3 {
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
 }
 
 .main-home button {
@@ -155,11 +159,12 @@ nav {
 }
 
 .motto-container h1 {
-  font-size: calc(8rem + 1vw);
+  font-size: calc(7rem + 1vw);
 }
 
 .motto-container p {
   font-size: calc(1rem + 1vw);
+  line-height: 4rem;
   width: 75vw;
 }
 
@@ -210,7 +215,7 @@ nav {
 .service-1 h1,
 .service-2 h1,
 .service-3 h1 {
-  font-size: calc(8rem + 1vw);
+  font-size: calc(6rem + 1vw);
   padding-top: 2rem;
 }
 
@@ -219,6 +224,7 @@ nav {
 .service-3 p {
   font-size: calc(1rem + 1vw);
   padding: 3rem 5rem 4rem 5rem;
+  line-height: 4rem;
 }
 
 .service-1-description button,
@@ -261,7 +267,7 @@ nav {
 }
 
 .main-booking h1 {
-  font-size: calc(8rem + 1vw);
+  font-size: calc(7rem + 1vw);
 }
 
 .main-booking p {
@@ -269,6 +275,7 @@ nav {
   width: 80%;
   text-align: center;
   padding: 5rem 0;
+  line-height: 4rem;
 }
 
 .main-booking button {

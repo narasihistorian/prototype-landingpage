@@ -225,7 +225,7 @@ nav {
   align-items: center;
   text-align: center;
   color: var(--darkWhiteColor);
-  padding-top: 5rem;
+  padding-top: 15rem;
 }
 
 .main-title-mask,
@@ -237,7 +237,7 @@ nav {
 
 .main-home h1 {
   font-family: var(--drukBoldTrial);
-  font-size: calc(10rem + 1vw);
+  font-size: calc(12rem + 1vw);
   transform: translateX(-100%);
   transform-origin: left;
   opacity: 0.5;
@@ -307,8 +307,8 @@ nav {
 .motto-container p {
   font-size: calc(0.3rem + 1vw);
   font-family: var(--monaSansLight);
-  width: 70%;
-  line-height: 3rem;
+  width: 50%;
+  line-height: 4rem;
 }
 
 /* service  */
@@ -381,7 +381,7 @@ nav {
 .service-2 h1,
 .service-3 h1 {
   font-family: var(--drukBoldTrial);
-  font-size: calc(6rem + 1vw);
+  font-size: calc(5rem + 1vw);
   padding-top: 2rem;
 }
 
@@ -390,7 +390,7 @@ nav {
 .service-3 p {
   font-family: var(--monaSansLight);
   font-size: calc(0.3rem + 1vw);
-  line-height: 3rem;
+  line-height: 4rem;
   padding: 3rem 0 5rem 0;
 }
 
@@ -431,7 +431,7 @@ nav {
 .main-booking p {
   font-family: var(--monaSansLight);
   font-size: calc(0.3rem + 1vw);
-  line-height: 3rem;
+  line-height: 4rem;
   padding: 5rem 0;
 }
 

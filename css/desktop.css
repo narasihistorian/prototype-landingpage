@@ -60,7 +60,7 @@ html.lenis {
 /* home sections */
 
 .main-home h1 {
-  font-size: calc(8rem + 1vw);
+  font-size: calc(9rem + 1vw);
 }
 
 .main-home h3 {
@@ -74,12 +74,14 @@ html.lenis {
 /* motto sections */
 
 .motto-container h1 {
-  font-size: calc(6rem + 1vw);
+  font-size: calc(5rem + 1vw);
   letter-spacing: 0rem;
 }
 
 .motto-container p {
   font-size: calc(0.2rem + 1vw);
+  width: 60%;
+  line-height: 3rem;
 }
 
 /* service  */
@@ -91,7 +93,7 @@ html.lenis {
 .service-1 h1,
 .service-2 h1,
 .service-3 h1 {
-  font-size: calc(5rem + 1vw);
+  font-size: calc(4rem + 1vw);
 }
 
 .service-1 p,
@@ -99,6 +101,14 @@ html.lenis {
 .service-3 p {
   font-size: calc(0.2rem + 1vw);
   padding: 3rem 5rem 5rem 0;
+  line-height: 3rem;
+}
+
+.service-1-description button,
+.service-2-description button,
+.service-3-description button {
+  padding: 1rem 3rem;
+  font-size: calc(0.8rem + 0.5vw);
 }
 
 /* hero sections */
@@ -109,4 +119,6 @@ html.lenis {
 
 .main-booking p {
   font-size: calc(0.2rem + 1vw);
+  line-height: 3rem;
+  padding: 3rem 0;
 }

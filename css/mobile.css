@@ -101,9 +101,9 @@ html.lenis {
 }
 
 .main-home h1 {
-  font-size: calc(7rem + 1vw);
+  font-size: calc(6rem + 1vw);
   padding: 0 8rem 0 0;
-  line-height: 8rem;
+  line-height: 7rem;
 }
 
 .main-home h3 {
@@ -165,7 +165,7 @@ html.lenis {
 .service-1 h1,
 .service-2 h1,
 .service-3 h1 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(3rem + 1vw);
 }
 
 .service-1 p,
@@ -189,7 +189,7 @@ html.lenis {
 }
 
 .main-booking h1 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(3rem + 1vw);
   text-align: center;
 }
 

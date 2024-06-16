@@ -15,12 +15,19 @@
     />
     <link rel="stylesheet" href="./css/tab.css" media="(max-width: 1024px)" />
     <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 720px)" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-    </style>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -31,9 +38,15 @@
       </div>
       <div class="bg-navbar">
         <ul class="menu-navbar">
-          <li><a href="#motto">Filosofi</a></li>
-          <li><a href="#service">Fasilitas</a></li>
-          <li><a href="#booking">Booking</a></li>
+          <div class="navbar-1-mask">
+            <li><a href="#motto">Filosofi</a></li>
+          </div>
+          <div class="navbar-2-mask">
+            <li><a href="#service">Fasilitas</a></li>
+          </div>
+          <div class="navbar-3-mask">
+            <li><a href="#booking">Booking</a></li>
+          </div>
         </ul>
       </div>
 
@@ -48,34 +61,27 @@
 
     <!-- Home -->
 
-    <div class="main-content">
+    <main class="main-content">
       <section id="home">
-        <!-- opening animation -->
-        <div class="bg-container"></div>
-        <div class="title-animation-1">
-          <h1>ini hanya merupakan prototype landing page</h1>
-        </div>
-        <div class="title-animation-2">
-          <h1>Enjoy :)</h1>
-        </div>
-
         <!-- main container -->
         <div class="main-home">
           <video class="background-video" autoplay loop muted>
             <source
-              src="./assets/img/camping web legacy.mp4"
+              src="./assets/img/camping 2 web legacy.mp4"
               type="video/mp4"
             />
           </video>
           <div class="main-title-container">
             <div class="main-title-mask">
-              <h1>Welcome to Anta Valley</h1>
+              <h1>Welcome to AntaValley</h1>
             </div>
             <div class="sub-title-mask">
-              <h3>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Explicabo iure hic
-              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sapiente aliquid iste magnam quidem ducimus labore sequi ratione
+                doloribus dignissimos maiores ex culpa saepe, officiis
+                repellendus aperiam dicta sit mollitia excepturi.
+              </p>
             </div>
             <button>Book Now</button>
           </div>
@@ -85,29 +91,59 @@
       <!-- Description -->
 
       <section id="motto">
-        <video class="background-motto" autoplay loop muted>
-          <source
-            src="./assets/img/camping 2 web legacy.mp4"
-            type="video/mp4"
-          />
-        </video>
         <div class="motto-container">
-          <h1>Relax & Have fun</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias
-            corrupti tenetur in vitae commodi perspiciatis veritatis laboriosam
-            explicabo repudiandae a quia fugit odio ad quam, hic blanditiis
-            provident rerum necessitatibus.
-          </p>
+          <div class="motto-grid-container">
+            <div class="grid-1">
+              <div class="grid-1-main-title">
+                <div class="grid-1-main-title-overlay">
+                  <h1>Affordable & The Best Cottage in Indonesia</h1>
+                </div>
+                <div class="grid-1-main-title-paragraph-overlay">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="grid-2-main-title">
+                <video autoplay loop muted>
+                  <source
+                    src="./assets/img/camping web legacy.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="grid-2-discount">
+                  <div class="paragraph-discount-overlay">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Inventore, quo. Excepturi, iusto? Officia ratione ad, hic
+                      nemo voluptatibus quibusdam optio dignissimos. Ipsum vitae
+                      temporibus neque et dolorum enim quisquam quod?
+                    </p>
+                  </div>
+                  <div class="get-discount-overlay">
+                    <h1>Get Discount</h1>
+                    <div class="up-to-25-overlay">
+                      <h1>Up to 25%</h1>
+                      <div class="line-discount"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- service -->
 
-      <section id="service">
-        <div class="service-container">
+      <section id="service1">
+        <div class="service-container1">
           <div class="service-1">
-            <img src="./assets/img/feature-01.png" alt="" />
+            <div class="service-1-image">
+              <img src="./assets/img/feature-01.png" alt="" />
+            </div>
             <div class="service-1-description">
               <h1>Hiking & Adventure</h1>
               <p>
@@ -119,6 +155,11 @@
               <button>Selengkapnya</button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="service2">
+        <div class="service-container2">
           <div class="service-2">
             <div class="service-2-description">
               <h1>Fishing Experience</h1>
@@ -130,10 +171,19 @@
               </p>
               <button>Selengkapnya</button>
             </div>
-            <img src="./assets/img/feature-03.png" alt="" />
+            <div class="service-2-image">
+              <img src="./assets/img/feature-03.png" alt="" />
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section id="service3">
+        <div class="service-container3">
           <div class="service-3">
-            <img src="./assets/img/feature-02.png" alt="" />
+            <div class="service-3-image">
+              <img src="./assets/img/feature-02.png" alt="" />
+            </div>
             <div class="service-3-description">
               <h1>Relaxing with nature</h1>
               <p>
@@ -152,29 +202,26 @@
 
       <section id="booking">
         <div class="main-booking">
-          <video class="background-video-booking" autoplay loop muted>
-            <source
-              src="./assets/img/character penutup fullhd.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <video class="background-video-booking2" autoplay loop muted>
-            <source
-              src="./assets/img/character penutup tab mobile.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <h1>Booking yuk Sekarang</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            aliquam tempora odio, rerum, officiis eaque iste facilis, ullam
-            veniam unde sequi! Est molestias, saepe quo commodi consectetur
-            veritatis quod sint?
-          </p>
-          <button>WhatsAPP</button>
+          <div class="main-booking-title">
+            <h1>Booking yuk Sekarang</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+              aliquam tempora odio, rerum, officiis eaque iste facilis, ullam
+              veniam unde sequi! Est molestias, saepe quo commodi consectetur
+              veritatis quod sint?
+            </p>
+            <div class="main-booking-title-button">
+              <button>WhatsAPP</button>
+            </div>
+          </div>
+          <div class="main-booking-video">
+            <video class="background-video-booking" autoplay loop muted>
+              <source src="./assets/img/4.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
       </section>
-    </div>
+    </main>
 
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>

@@ -59,15 +59,6 @@ html.lenis {
 
 /* navbar --------------------------------------------------------------- */
 
-.burger {
-  padding-right: 2rem;
-}
-
-.burger span {
-  width: 100%;
-  height: 100%;
-}
-
 .menu-navbar li {
   padding: 3rem 0;
 }
@@ -80,124 +71,96 @@ html.lenis {
 
 .logo-navbar,
 .logo-navbar a {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(1rem + 1vw);
 }
 
 /* hero sections */
 
-#home {
-  justify-content: center;
-  align-items: start;
-  text-align: start;
-  padding: 0 0 0 5%;
-}
-
-.main-title-container {
-  justify-content: center;
-  align-items: start;
-  text-align: start;
-  color: var(--darkWhiteColor);
-  padding-top: 13rem;
+.main-home {
+  padding: 0 10% 19% 10%;
 }
 
 .main-home h1 {
-  font-size: calc(6rem + 1vw);
-  padding: 0 8rem 0 0;
-  line-height: 7rem;
+  font-size: calc(3rem + 1vw);
 }
 
-.main-home h3 {
-  padding: 2rem 7rem 3rem 0;
-  line-height: 3rem;
+.main-home p {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 2rem;
 }
 
 .main-home button {
-  padding: 1rem 3rem;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(1rem + 0.5vw);
 }
-
 /* motto sections */
 
-.motto-container {
-  padding: 0 0 35% 0;
+.grid-1-main-title h1 {
+  font-size: calc(2rem + 1vw);
 }
 
-.motto-container h1 {
-  font-size: calc(4rem + 1vw);
+.grid-1-main-title p {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 2rem;
 }
 
-.motto-container p {
-  line-height: 3rem;
+.grid-2-discount {
+  padding: 2rem;
+}
+
+.grid-2-discount p {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 2rem;
+}
+
+.grid-2-discount h1 {
+  font-size: calc(1rem + 1vw);
 }
 
 /* service  */
 
 .service-1,
 .service-3 {
-  flex-direction: column;
-  padding: 3rem 0;
+  padding: 5rem 1rem;
+  gap: 2rem;
 }
 
 .service-2 {
-  flex-direction: column-reverse;
-  padding: 10rem 0;
-}
-
-.service-1-description,
-.service-3-description {
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 80%;
-}
-
-.service-2-description {
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 80%;
+  padding: 5rem 1rem;
+  gap: 2rem;
 }
 
 .service-1 h1,
 .service-2 h1,
 .service-3 h1 {
-  font-size: calc(3rem + 1vw);
+  font-size: calc(2rem + 1vw);
 }
 
 .service-1 p,
 .service-2 p,
 .service-3 p {
-  padding: 3rem 0rem 3rem 0rem;
-  line-height: 3rem;
+  font-size: calc(1rem + 0.5vw);
+  line-height: 2rem;
+}
+
+.service-1-description button,
+.service-2-description button,
+.service-3-description button {
+  font-size: calc(1rem + 0.5vw);
 }
 
 /* booking sections */
 
-#booking {
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0 0 0;
+.main-booking-title h1 {
+  font-size: calc(2rem + 1vw);
 }
 
-.background-video-booking2 {
-  width: 120vw;
-  height: 130vh;
+.main-booking-title p {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 2rem;
+  padding: 3rem 0;
 }
 
-.main-booking h1 {
-  font-size: calc(3rem + 1vw);
-  text-align: center;
-}
-
-.main-booking p {
-  padding: 4rem 0;
-  line-height: 3rem;
-}
-
-.main-booking button {
-  font-size: calc(0.8rem + 1vw);
+.main-booking-title button {
+  padding: 1rem 3rem;
+  font-size: calc(1rem + 0.5vw);
 }

@@ -59,66 +59,86 @@ html.lenis {
 
 /* home sections */
 
-.main-home h1 {
-  font-size: calc(9rem + 1vw);
+.main-home {
+  padding: 0 25% 10% 25%;
 }
 
-.main-home h3 {
-  font-size: calc(0.3rem + 1vw);
+.main-home h1 {
+  font-size: calc(2.5rem + 1vw);
+}
+
+.main-home p {
+  font-size: calc(0.6rem + 0.5vw);
+  line-height: 2rem;
 }
 
 .main-home button {
-  font-size: calc(0.3rem + 1vw);
+  font-size: calc(0.6rem + 0.5vw);
 }
 
 /* motto sections */
 
-.motto-container h1 {
-  font-size: calc(5rem + 1vw);
-  letter-spacing: 0rem;
+.grid-1-main-title h1 {
+  font-size: calc(1.5rem + 1vw);
 }
 
-.motto-container p {
-  font-size: calc(0.2rem + 1vw);
-  width: 60%;
-  line-height: 3rem;
+.grid-1-main-title p {
+  font-size: calc(0.6rem + 0.5vw);
+  line-height: 2rem;
+}
+
+.grid-2-discount h1 {
+  font-size: calc(2rem + 1vw);
+}
+
+.grid-2-discount p {
+  font-size: calc(0.6rem + 0.5vw);
+  line-height: 2rem;
+}
+
+.grid-2-discount h1 {
+  font-size: calc(1rem + 1vw);
 }
 
 /* service  */
 
-.service-2-description {
-  padding: 10rem 0;
-}
-
 .service-1 h1,
 .service-2 h1,
 .service-3 h1 {
-  font-size: calc(4rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
 }
 
 .service-1 p,
 .service-2 p,
 .service-3 p {
-  font-size: calc(0.2rem + 1vw);
-  padding: 3rem 5rem 5rem 0;
-  line-height: 3rem;
+  font-size: calc(0.6rem + 0.5vw);
+  line-height: 2rem;
 }
 
 .service-1-description button,
 .service-2-description button,
 .service-3-description button {
-  padding: 1rem 3rem;
-  font-size: calc(0.8rem + 0.5vw);
+  font-size: calc(0.6rem + 0.5vw);
 }
 
 /* hero sections */
 
-.main-booking h1 {
-  font-size: calc(5rem + 1vw);
+.main-booking {
+  padding: 10% 5%;
+  gap: 0 5rem;
 }
 
-.main-booking p {
-  font-size: calc(0.2rem + 1vw);
-  line-height: 3rem;
+.main-booking-title h1 {
+  font-size: calc(2rem + 1vw);
+}
+
+.main-booking-title p {
+  font-size: calc(0.6rem + 0.5vw);
+  line-height: 2rem;
   padding: 3rem 0;
+}
+
+.main-booking-title button {
+  padding: 1rem 3rem;
+  font-size: calc(0.6rem + 0.5vw);
 }

@@ -2,18 +2,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 // lenis scrool basic setup -------------------------------------------
 
-const lenis = new Lenis();
+// const lenis = new Lenis();
 
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
+// lenis.on("scroll", (e) => {
+//   console.log(e);
+// });
 
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
+// function raf(time) {
+//   lenis.raf(time);
+//   requestAnimationFrame(raf);
+// }
 
-requestAnimationFrame(raf);
+// requestAnimationFrame(raf);
 
 // navbar burger toggle mobile version -------------------------------------------
 
@@ -79,6 +79,21 @@ matchMediaResponsive.add(
     console.log(context.conditions);
     const { isDesktop, isMobile } = context.conditions;
 
+    // smooth scrool ---------------------------------------------------
+
+    const container = document.querySelector(".main-content");
+    const items = document.querySelectorAll("section");
+
+    container.addEventListener("wheel", (event) => {
+      event.preventDefault();
+      const delta = event.deltaY;
+
+      container.scrollBy({
+        top: delta,
+        behavior: "smooth",
+      });
+    });
+
     // navbar closed ---------------------------------------------------------------
 
     const showAnim = gsap
@@ -99,122 +114,39 @@ matchMediaResponsive.add(
 
     // home opening animation ---------------------------------------------------------------
 
-    // scene 1 ----------------------------------------------------
-
-    const textPembuka = new SplitType(".title-animation-1 h1");
+    const textPembuka = new SplitType(".main-title-container h1");
+    gsap.set(".main-title-container h1", { autoAlpha: 1 });
 
     const tl = gsap.timeline({
       defaults: { duration: 0.75, ease: "power4.inOut" },
     });
 
-    gsap.set(".title-animation-1 h1", { autoAlpha: 1 });
-
-    tl.to(["#motto", "#service", "#booking"], {
-      display: isMobile ? "block" : "none",
-    });
-
     if (isDesktop) {
-      tl.from(
-        textPembuka.chars,
-        {
-          y: 40,
-          opacity: 0,
-          skewX: 30,
-          stagger: 0.03,
-          duration: 0.5,
-        },
-        "<"
-      );
-
-      tl.to(textPembuka.chars, {
-        y: -40,
+      tl.from(textPembuka.chars, {
+        y: 40,
         opacity: 0,
-        skewX: -10,
+        skewX: 30,
         stagger: 0.03,
-        duration: 0.5,
-      });
+        duration: 1.5,
+      })
+        .to(".sub-title-mask p", { y: 0, opacity: 1, duration: 2.5 }, "<")
 
-      tl.to(".title-animation-2 h1", {
-        opacity: 1,
-        duration: 1,
-      }).to(".title-animation-2 h1", {
-        opacity: 0,
-        duration: 1,
-      });
-    } else {
-      gsap.set(
-        [".title-animation-1", ".title-animation-2"],
-        {
-          display: "none",
-        },
-        "<"
-      );
-    }
-
-    // scene 2 ----------------------------------------------------
-
-    if (isDesktop) {
-      tl.to(
-        ".background-video",
-        {
-          scaleX: 1,
-          delay: 1,
-          duration: 1,
-        },
-        "-=1.5"
-      )
         .to(
-          ".background-video",
-          {
-            height: "100vh",
-            bottom: 0,
-            top: 0,
-            delay: 1,
-            duration: 1,
-          },
-          "-=.5"
+          ".main-home button",
+          { scale: 1, ease: "bounce.out", duration: 2, delay: 0.5 },
+          "<"
         )
-        .to(".background-video", { border: "none" }, "-=.5");
+        .to(
+          ".logo-navbar",
+          {
+            x: "0%",
+            duration: 2,
+            opacity: 1,
+          },
+          "<"
+        );
 
-      tl.to(
-        ".main-title-mask h1",
-        {
-          x: isMobile ? 1 : 0,
-          opacity: 1,
-          duration: 1.5,
-        },
-        "<"
-      ).to(
-        ".sub-title-mask h3",
-        { y: isMobile ? 1 : 0, opacity: 1, duration: 1.5 },
-        "<"
-      );
-
-      tl.to(
-        ".main-title-mask h1",
-        { scale: isMobile ? 1 : 0.9, transformOrigin: "center" },
-        "-=.5"
-      );
-      tl.to(
-        ".sub-title-mask h3",
-        { scale: isMobile ? 1 : 0.9, transformOrigin: "center" },
-        "<"
-      );
-      tl.to(".main-home button", { scaleY: 1, duration: 0.5 }, "-=.9");
-
-      tl.to(
-        ".logo-navbar",
-        {
-          x: "0%",
-          duration: 1.5,
-          opacity: 1,
-        },
-        "<"
-      );
-
-      tl.to(".menu-navbar", { y: 0, duration: 1.5 }, "-=.7");
-
-      tl.to(["#motto", "#service", "#booking"], { display: "block" });
+      tl.to(".menu-navbar li", { y: 0, stagger: 0.2, duration: 2 }, "<");
     } else {
       gsap.set(".logo-navbar", {
         opacity: 1,
@@ -232,49 +164,25 @@ matchMediaResponsive.add(
         transformOrigin: "left",
         opacity: 1,
       });
-      gsap.set(".main-home h3", {
+      gsap.set(".main-home p", {
         y: 0,
         opacity: 1,
       });
       gsap.set(".main-home button ", {
-        scaleY: 1,
+        scale: 1,
+      });
+      gsap.set(".menu-navbar li", {
+        y: 0,
       });
     }
 
-    // close home with opacity -----------------------------------------
-
-    const tlhomeOpacity = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#home",
-        start: "80% center",
-        end: "bottom top",
-        scrub: 4,
-
-        // the 4 states of toggle actions
-
-        // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
-        // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
-        // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
-        // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
-        // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
-
-        // toggleActions: "play complete play reverse",
-
-        // markers: true,
-      },
-      default: { ease: "power3.out", duration: 1 },
-    });
-
-    tlhomeOpacity.to("#home", { opacity: isMobile ? 1 : 0, duration: 0.8 });
-
     // Description sections -----------------------------------------
-
-    const mainTextMottoSections = new SplitType(".motto-container h1");
 
     const tlMottoSections = gsap.timeline({
       scrollTrigger: {
         trigger: "#motto",
-        start: "-35% center",
+        scroller: ".main-content",
+        start: "center 55%",
 
         // the 4 states of toggle actions
 
@@ -284,165 +192,233 @@ matchMediaResponsive.add(
         // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
         // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
 
-        toggleActions: "play complete restart reverse",
+        toggleActions: "play complete none none",
 
         // markers: true,
       },
       default: { ease: "power3.out", duration: 2 },
     });
 
-    gsap.set(".motto-container h1", { autoAlpha: 1 });
-
-    tlMottoSections.from(".background-motto", { opacity: 0, duration: 1 });
-
-    tlMottoSections.from(
-      mainTextMottoSections.chars,
-      {
-        y: isMobile ? 0 : 40,
-        opacity: isMobile ? 1 : 0,
-        skewX: isMobile ? 0 : 30,
-        stagger: 0.03,
-        duration: 0.8,
-      },
-      "-=.5"
-    );
-
-    tlMottoSections.from(
-      ".motto-container p",
-      {
-        y: isMobile ? 0 : 40,
-        opacity: isMobile ? 1 : 0,
-        duration: 0.7,
-      },
-      "-=.8"
-    );
+    tlMottoSections
+      .from(".grid-2-main-title", {
+        duration: 1,
+        opacity: isMobile ? 1 : 0.5,
+      })
+      .from(
+        ".grid-2-discount h1",
+        {
+          y: isMobile ? 0 : "100%",
+          stagger: 0.5,
+          duration: 1,
+          opacity: isMobile ? 1 : 0,
+        },
+        "<"
+      )
+      .from(
+        ".grid-2-discount p",
+        {
+          y: isMobile ? 0 : "40%",
+          opacity: isMobile ? 1 : 0,
+          duration: 1.5,
+        },
+        "<"
+      )
+      .from(
+        ".grid-1-main-title h1",
+        {
+          y: isMobile ? 0 : "40%",
+          opacity: isMobile ? 1 : 0,
+          duration: 1.5,
+        },
+        "<"
+      )
+      .from(
+        ".grid-1-main-title p",
+        {
+          y: isMobile ? 0 : "50%",
+          opacity: isMobile ? 1 : 0,
+          duration: 1.2,
+        },
+        "<"
+      )
+      .from(
+        ".line-discount",
+        {
+          width: isMobile ? "100%" : "0%",
+          duration: 1.5,
+          opacity: isMobile ? 1 : 0,
+          delay: 1,
+        },
+        "<"
+      );
 
     // service sections -----------------------------------------
 
-    const imgServiceSections = gsap.utils.toArray("#service img");
-    const mainTitleServiceSections = gsap.utils.toArray("#service h1");
-    const paragraphServiceSections = gsap.utils.toArray("#service p");
-    const buttonServiceSections = gsap.utils.toArray("#service button");
+    const tlService = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#service1",
+        scroller: ".main-content",
+        start: "center 55%",
 
-    // main title
+        // the 4 states of toggle actions
 
-    imgServiceSections.forEach((img) => {
-      const tlService = gsap.timeline({
-        scrollTrigger: {
-          trigger: img,
-          start: "top bottom",
+        // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
+        // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
+        // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
+        // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
+        // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
 
-          // the 4 states of toggle actions
+        toggleActions: "play complete none none",
+        // markers: true,
+      },
+    });
 
-          // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
-          // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
-          // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
-          // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
-          // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
-
-          toggleActions: "play complete restart reverse",
-          // markers: true,
-        },
-      });
-
-      tlService.from(img, {
+    tlService
+      .from(".service-1 img", {
         duration: isMobile ? 0 : 1,
-        x: isMobile ? 0 : "-50",
         opacity: isMobile ? 1 : 0,
-        stagger: 0.005,
-        ease: "power2.out",
-      });
+        x: isMobile ? 0 : "-10%",
+      })
+      .from(
+        ".service-1 h1",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          y: isMobile ? 0 : "20%",
+        },
+        "<"
+      )
+      .from(
+        ".service-1 p",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          y: isMobile ? 0 : "20%",
+        },
+        "<"
+      )
+      .from(
+        ".service-1-description button",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          scale: 0,
+          ease: "bounce.out",
+        },
+        "<"
+      );
+
+    // service 2
+
+    const tlService2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#service2",
+        scroller: ".main-content",
+        start: "center 55%",
+
+        // the 4 states of toggle actions
+
+        // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
+        // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
+        // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
+        // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
+        // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
+
+        toggleActions: "play complete none none",
+        // markers: true,
+      },
     });
 
-    // main title
-
-    mainTitleServiceSections.forEach((text) => {
-      const splitType = new SplitType(text);
-
-      const tlService = gsap.timeline({
-        scrollTrigger: {
-          trigger: text,
-          start: "top bottom",
-
-          // the 4 states of toggle actions
-
-          // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
-          // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
-          // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
-          // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
-          // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
-
-          toggleActions: "play complete restart reverse",
-          // markers: true,
-        },
-      });
-
-      tlService.from(splitType.chars, {
-        duration: 1,
-        y: isMobile ? 0 : 50,
+    tlService2
+      .from(".service-2 img", {
+        duration: isMobile ? 0 : 1,
         opacity: isMobile ? 1 : 0,
-        stagger: 0.005,
-        ease: "power2.out",
-      });
+        x: isMobile ? 0 : "10%",
+      })
+      .from(
+        ".service-2 h1",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          y: isMobile ? 0 : "20%",
+        },
+        "<"
+      )
+      .from(
+        ".service-2 p",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          y: isMobile ? 0 : "20%",
+        },
+        "<"
+      )
+      .from(
+        ".service-2-description button",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          scale: 0,
+          ease: "bounce.out",
+        },
+        "<"
+      );
+
+    // service 3
+
+    const tlService3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#service3",
+        scroller: ".main-content",
+        start: "center 55%",
+
+        // the 4 states of toggle actions
+
+        // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
+        // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
+        // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
+        // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
+        // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
+
+        toggleActions: "play complete none none",
+        // markers: true,
+      },
     });
 
-    // paragraph title
-
-    paragraphServiceSections.forEach((paragraph) => {
-      const tlService = gsap.timeline({
-        scrollTrigger: {
-          trigger: paragraph,
-          start: "top bottom",
-
-          // the 4 states of toggle actions
-
-          // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
-          // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
-          // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
-          // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
-          // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
-
-          toggleActions: "play complete restart reverse",
-          // markers: true,
-        },
-      });
-
-      tlService.from(paragraph, {
-        duration: 1,
-        y: isMobile ? "0%" : "50%",
+    tlService3
+      .from(".service-3 img", {
+        duration: isMobile ? 0 : 1,
         opacity: isMobile ? 1 : 0,
-        ease: "power2.out",
-      });
-    });
-
-    // button
-
-    buttonServiceSections.forEach((button) => {
-      const tlService = gsap.timeline({
-        scrollTrigger: {
-          trigger: button,
-          start: "top bottom",
-
-          // the 4 states of toggle actions
-
-          // onEnter - this actions happens when you scrool into specific sections or element for the first time. scroolling down
-          // onLeave - this actions happens when you scrool out of a specific sections or element for the frist time. scrooling down
-          // onEnterBack - this actions happens when you scrool back into a specific sections or element for the first time.  scrooling up
-          // onLeaveBack - this actions happens when you scrool back out of a specific sections or elemetn for the first time . scrolling up
-          // value: "play", "resume", "reset", "restart", complete, "reverse", and "none"
-
-          toggleActions: "play complete restart reverse",
-          // markers: true,
+        x: "-10%",
+      })
+      .from(
+        ".service-3 h1",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          y: isMobile ? 0 : "20%",
         },
-      });
-
-      tlService.from(button, {
-        duration: 0.5,
-        scaleX: isMobile ? 1 : 0,
-        opacity: isMobile ? 1 : 0.5,
-        ease: "power2.out",
-      });
-    });
+        "<"
+      )
+      .from(
+        ".service-3 p",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          y: isMobile ? 0 : "20%",
+        },
+        "<"
+      )
+      .from(
+        ".service-3-description button",
+        {
+          duration: isMobile ? 0 : 1.5,
+          opacity: isMobile ? 1 : 0,
+          scale: 0,
+          ease: "bounce.out",
+        },
+        "<"
+      );
 
     // closing sections -----------------------------------------
 
@@ -453,7 +429,8 @@ matchMediaResponsive.add(
     const tlClosing = gsap.timeline({
       scrollTrigger: {
         trigger: "#booking",
-        start: "top center",
+        scroller: ".main-content",
+        start: "center 65%",
 
         // the 4 states of toggle actions
 

@@ -128,7 +128,6 @@ nav {
 
 .main-home p {
   font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
 }
 
 .main-home button {
@@ -152,12 +151,10 @@ nav {
 
 .grid-1-main-title p {
   font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
 }
 
 .grid-2-discount p {
   font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
 }
 
 .grid-2-discount h1 {
@@ -200,7 +197,6 @@ nav {
 .service-2 p,
 .service-3 p {
   font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
 }
 
 .service-1-description button,
@@ -222,8 +218,6 @@ nav {
 
 .main-booking-title p {
   font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
-  padding: 3rem 0;
 }
 
 .main-booking-title button {

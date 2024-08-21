@@ -84,11 +84,6 @@ html.lenis {
   font-size: calc(3rem + 1vw);
 }
 
-.main-home p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
-}
-
 .main-home button {
   font-size: calc(1rem + 0.5vw);
 }
@@ -98,18 +93,8 @@ html.lenis {
   font-size: calc(2rem + 1vw);
 }
 
-.grid-1-main-title p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
-}
-
 .grid-2-discount {
   padding: 2rem;
-}
-
-.grid-2-discount p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
 }
 
 .grid-2-discount h1 {
@@ -135,32 +120,8 @@ html.lenis {
   font-size: calc(2rem + 1vw);
 }
 
-.service-1 p,
-.service-2 p,
-.service-3 p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
-}
-
-.service-1-description button,
-.service-2-description button,
-.service-3-description button {
-  font-size: calc(1rem + 0.5vw);
-}
-
 /* booking sections */
 
 .main-booking-title h1 {
   font-size: calc(2rem + 1vw);
-}
-
-.main-booking-title p {
-  font-size: calc(1rem + 0.5vw);
-  line-height: 2rem;
-  padding: 3rem 0;
-}
-
-.main-booking-title button {
-  padding: 1rem 3rem;
-  font-size: calc(1rem + 0.5vw);
 }

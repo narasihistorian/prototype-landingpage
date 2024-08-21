@@ -159,10 +159,10 @@ matchMediaResponsive.add(
         bottom: 0,
         scaleX: 1,
       });
-      gsap.set(".main-home h1", {
-        x: 0,
-        transformOrigin: "left",
+      gsap.set(textPembuka.chars, {
+        y: 0,
         opacity: 1,
+        skewX: 0,
       });
       gsap.set(".main-home p", {
         y: 0,

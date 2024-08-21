@@ -114,19 +114,14 @@ matchMediaResponsive.add(
 
     // home opening animation ---------------------------------------------------------------
 
-    const textPembuka = new SplitType(".main-title-container h1");
-    gsap.set(".main-title-container h1", { autoAlpha: 1 });
-
     const tl = gsap.timeline({
       defaults: { duration: 0.75, ease: "power4.inOut" },
     });
 
     if (isDesktop) {
-      tl.from(textPembuka.chars, {
-        y: 40,
-        opacity: 0,
-        skewX: 30,
-        stagger: 0.03,
+      tl.to(".main-home h1", {
+        y: 0,
+        opacity: 1,
         duration: 1.5,
       })
         .to(".sub-title-mask p", { y: 0, opacity: 1, duration: 2.5 }, "<")
@@ -159,10 +154,9 @@ matchMediaResponsive.add(
         bottom: 0,
         scaleX: 1,
       });
-      gsap.set(textPembuka.chars, {
+      gsap.set(".main-home h1", {
         y: 0,
         opacity: 1,
-        skewX: 0,
       });
       gsap.set(".main-home p", {
         y: 0,

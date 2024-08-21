@@ -210,11 +210,9 @@ nav {
 }
 
 .main-home h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+  font-family: var(--drukBoldTrial);
   color: #d5d6b7;
-  font-size: calc(3rem + 1vw);
+  font-size: calc(5rem + 1vw);
   transform: translateY(0%);
   transform-origin: top;
   opacity: 0;

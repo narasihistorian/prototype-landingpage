@@ -1,53 +1,44 @@
-@media (max-width: 1024px) {
-  /* navbar --------------------------------------------------------------- */
+/* navbar --------------------------------------------------------------- */
 
-  .menu-navbar li a {
-    font-size: calc(2rem + 1vw);
-  }
+.grid-2-main-title {
+  gap: 1rem;
+  padding: 0 1rem;
+}
 
-  .logo-navbar a,
-  .menu-navbar li a {
-    font-size: calc(1.5rem + 0.5vw);
-  }
+.service-1-description,
+.service-2-description,
+.service-3-description {
+  padding: 0 2rem;
+  gap: 2rem;
+}
 
-  .grid-2-main-title {
-    gap: 1rem;
-    padding: 0 1rem;
-  }
+.main-home h1 {
+  font-size: calc(4rem + 1vw);
+}
 
-  .service-1-description,
-  .service-2-description,
-  .service-3-description {
-    padding: 0 1rem;
-    gap: 2rem;
-  }
+.grid-1-main-title h1,
+.grid-2-discount h1,
+.service-1 h1,
+.service-2 h1,
+.service-3 h1,
+.main-booking-title h1 {
+  font-size: calc(2rem + 0.5vw);
+}
 
-  .main-home h1 {
-    font-size: calc(4rem + 1vw);
-  }
-
-  .grid-1-main-title h1,
-  .grid-2-discount h1,
-  .service-1 h1,
-  .service-2 h1,
-  .service-3 h1,
-  .main-booking-title h1 {
-    font-size: calc(2rem + 0.5vw);
-  }
-
-  .main-home p,
-  .grid-1-main-title p,
-  .grid-2-discount p,
-  .service-1 p,
-  .service-2 p,
-  .service-3 p,
-  .main-booking-title p,
-  .main-home button,
-  .service-1-description button,
-  .service-2-description button,
-  .service-3-description button,
-  .main-booking-title button {
-    font-size: calc(1rem + 0.5vw);
-    line-height: 2rem;
-  }
+.logo-navbar a,
+.menu-navbar li a,
+.main-home p,
+.grid-1-main-title p,
+.grid-2-discount p,
+.service-1 p,
+.service-2 p,
+.service-3 p,
+.main-booking-title p,
+.main-home button,
+.service-1-description button,
+.service-2-description button,
+.service-3-description button,
+.main-booking-title button {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 2rem;
 }

@@ -1,32 +1,8 @@
 /* font used */
 
 @font-face {
-  font-family: 'MonaSansLight';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../public/font/Mona-Sans.woff2') format('woff2-variations');
-  font-weight: 200;
-  font-stretch: 100%;
-}
-
-@font-face {
-  font-family: 'MonaSansLightNarrow';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../public/font/Mona-Sans.woff2') format('woff2-variations');
-  font-weight: 200;
-  font-stretch: 75%;
-}
-
-@font-face {
-  font-family: 'MonaSansBold';
-  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
-    url('../public/font/Mona-Sans.woff2') format('woff2-variations');
-  font-weight: 500;
-  font-stretch: 125%;
-}
-
-@font-face {
-  font-family: 'DrukBoldTrial';
-  src: url('../public/font/Druk-Bold-Trial\ \(1\).otf') format('truetype');
+  font-family: "DrukBoldTrial";
+  src: url("/font/Druk-Bold-Trial\ \(1\).otf") format("truetype");
 }
 
 /* global style  */
@@ -45,10 +21,10 @@
 
   /* font  */
 
-  --drukBoldTrial: 'DrukBoldTrial';
-  --monasansLightNarrow: 'MonaSansLightNarrow';
-  --monaSansLight: 'MonaSansLight';
-  --monaSansBold: 'MonaSansBold';
+  --drukBoldTrial: "DrukBoldTrial";
+  --monasansLightNarrow: "MonaSansLightNarrow";
+  --monaSansLight: "MonaSansLight";
+  --monaSansBold: "MonaSansBold";
 }
 
 * {
@@ -61,6 +37,9 @@ body {
   overflow-x: hidden;
   background: #232835;
   color: var(--darkWhiteColor);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* smooth scrool snap  ------------------------------------------*/
@@ -89,6 +68,39 @@ section {
   margin: auto;
 }
 
+.main-home h1 {
+  font-family: var(--drukBoldTrial);
+  color: #d5d6b7;
+  font-size: calc(6rem + 1vw);
+}
+
+.grid-1-main-title h1,
+.grid-2-discount h1,
+.service-1 h1,
+.service-2 h1,
+.service-3 h1,
+.main-booking-title h1 {
+  font-size: calc(3rem + 0.5vw);
+}
+
+.logo-navbar a,
+.menu-navbar li a,
+.main-home p,
+.grid-1-main-title p,
+.grid-2-discount p,
+.service-1 p,
+.service-2 p,
+.service-3 p,
+.main-booking-title p,
+.main-home button,
+.service-1-description button,
+.service-2-description button,
+.service-3-description button,
+.main-booking-title button {
+  font-size: calc(1rem + 0.5vw);
+  line-height: 3rem;
+}
+
 /* navbar section */
 
 nav {
@@ -107,39 +119,23 @@ nav {
   overflow: hidden;
 }
 
-.logo-navbar {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  transform: translateX(-100%);
-  transform-origin: left;
-  opacity: 0;
-}
-
 .logo-navbar a {
-  font-size: calc(1rem + 0.5vw);
   color: var(--darkWhiteColor);
   text-decoration: none;
 }
 
 .menu-navbar {
   display: flex;
-  gap: 0 2rem;
-  padding: 1rem 3rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
+  padding: 0 2rem;
+  gap: 2rem;
 }
 
 .menu-navbar li {
   display: inline-block;
   letter-spacing: 0.1rem;
-  transform: translateY(100%);
-  transform-origin: bottom;
 }
 
 .menu-navbar li a {
-  font-size: calc(1rem + 0.5vw);
   color: var(--darkWhiteColor);
   text-decoration: none;
 }
@@ -188,7 +184,6 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--darkWhiteColor);
   gap: 3rem;
 }
 
@@ -199,37 +194,13 @@ nav {
   z-index: 3;
 }
 
-.main-home h1 {
-  font-family: var(--drukBoldTrial);
-  color: #d5d6b7;
-  font-size: calc(6rem + 1vw);
-  transform: translateY(50%);
-  transform-origin: top;
-  opacity: 0;
-}
-
-.main-home p {
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(1rem + 0.5vw);
-  line-height: 3rem;
-  transform: translateY(100%);
-  transform-origin: bottom;
-  opacity: 0;
-}
-
 .main-home button {
   padding: 1rem 3rem;
   background: none;
   color: var(--darkWhiteColor);
-  font-size: calc(1rem + 0.5vw);
   cursor: pointer;
   border-radius: 1rem;
   border: 2px solid #d5d6b7;
-  transform-origin: center;
-  transform: scale(0);
 }
 
 /* motto sections */
@@ -258,27 +229,11 @@ nav {
 }
 
 .grid-1-main-title h1 {
-  font-size: calc(3rem + 0.5vw);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
   color: #d5d6b7;
-  transform: translateY(0);
-  transform-origin: bottom;
-  opacity: 1;
 }
 
 .grid-1-main-title p {
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(1rem + 0.5vw);
-  line-height: 3rem;
   text-align: center;
-  transform: translateY(0);
-  transform-origin: bottom;
-  opacity: 1;
 }
 
 .grid-2-main-title {
@@ -323,26 +278,8 @@ nav {
   height: 100%;
 }
 
-.grid-2-discount p {
-  font-size: calc(1rem + 0.5vw);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 3rem;
-  transform: translateY(0);
-  transform-origin: top;
-  opacity: 1;
-}
-
 .grid-2-discount h1 {
-  font-size: calc(2rem + 0.5vw);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
   color: #d5d6b7;
-  transform: translateY(0);
-  transform-origin: top;
-  opacity: 1;
 }
 
 .get-discount-overlay {
@@ -356,8 +293,6 @@ nav {
   background: #d5d6b7;
   width: 100%;
   height: 0.3rem;
-  transform-origin: left;
-  opacity: 1;
 }
 
 .grid-1 {
@@ -421,36 +356,12 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .service-1 h1,
 .service-2 h1,
 .service-3 h1 {
   color: #d5d6b7;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(3rem + 0.5vw);
-  transform: translateY(0);
-  transform-origin: right;
-  opacity: 1;
-}
-
-.service-1 p,
-.service-2 p,
-.service-3 p {
-  color: var(--darkWhiteColor);
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(1rem + 0.5vw);
-  line-height: 3rem;
-  transform: translateY(0);
-  transform-origin: top;
-  opacity: 1;
 }
 
 .service-1-description button,
@@ -459,12 +370,9 @@ nav {
   background: none;
   color: var(--darkWhiteColor);
   padding: 1rem 4rem;
-  font-size: calc(1rem + 0.5vw);
   cursor: pointer;
   border-radius: 1rem;
   border: 2px solid white;
-  transform: scaleX(1);
-  transform-origin: center;
 }
 
 /* hero sections */
@@ -486,19 +394,7 @@ nav {
 
 .main-booking-title h1 {
   color: #d5d6b7;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
   font-size: calc(3rem + 0.5vw);
-}
-
-.main-booking-title p {
-  font-family: 'Montserrat', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(1rem + 0.5vw);
-  line-height: 3rem;
 }
 
 .main-booking-title-button {
@@ -508,7 +404,6 @@ nav {
 .main-booking-title button {
   padding: 1rem 3rem;
   background: none;
-  font-size: calc(1rem + 0.5vw);
   cursor: pointer;
   color: var(--darkWhiteColor);
   border-radius: 1rem;
@@ -528,4 +423,93 @@ nav {
   width: 100%;
   height: 100%;
   opacity: 1;
+}
+
+/* animation css gsap setting -------------------------------- */
+
+.logo-navbar {
+  transform: translateX(-100%);
+  transform-origin: left;
+  opacity: 0;
+}
+
+.menu-navbar li {
+  transform: translateY(100%);
+  transform-origin: bottom;
+}
+
+.main-home h1 {
+  transform: translateY(50%);
+  transform-origin: top;
+  opacity: 0;
+}
+
+.main-home p {
+  transform: translateY(100%);
+  transform-origin: bottom;
+  opacity: 0;
+}
+
+.main-home button {
+  transform-origin: center;
+  transform: scale(0);
+}
+
+.grid-1-main-title h1 {
+  transform: translateY(0);
+  transform-origin: bottom;
+  opacity: 1;
+}
+
+.grid-1-main-title p {
+  transform: translateY(0);
+  transform-origin: bottom;
+  opacity: 1;
+}
+
+.grid-2-discount p {
+  transform: translateY(0);
+  transform-origin: top;
+  opacity: 1;
+}
+
+.line-discount {
+  transform-origin: left;
+  opacity: 1;
+}
+
+.grid-2-discount h1 {
+  transform: translateY(0);
+  transform-origin: top;
+  opacity: 1;
+}
+
+.service-1 img,
+.service-2 img,
+.service-3 img {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-1 h1,
+.service-2 h1,
+.service-3 h1 {
+  transform: translateY(0);
+  transform-origin: right;
+  opacity: 1;
+}
+
+.service-1 p,
+.service-2 p,
+.service-3 p {
+  transform: translateY(0);
+  transform-origin: top;
+  opacity: 1;
+}
+
+.service-1-description button,
+.service-2-description button,
+.service-3-description button {
+  transform: scaleX(1);
+  transform-origin: center;
 }

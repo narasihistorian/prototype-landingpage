@@ -1,32 +1,32 @@
 /* font used */
 
 @font-face {
-  font-family: "MonaSansLight";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLight';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../public/font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 100%;
 }
 
 @font-face {
-  font-family: "MonaSansLightNarrow";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansLightNarrow';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../public/font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 200;
   font-stretch: 75%;
 }
 
 @font-face {
-  font-family: "MonaSansBold";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("../assets/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-family: 'MonaSansBold';
+  src: url('Mona-Sans.woff2') format('woff2 supports variations'),
+    url('../public/font/Mona-Sans.woff2') format('woff2-variations');
   font-weight: 500;
   font-stretch: 125%;
 }
 
 @font-face {
-  font-family: "DrukBoldTrial";
-  src: url("../assets/fonts/Druk-Bold-Trial.otf") format("truetype");
+  font-family: 'DrukBoldTrial';
+  src: url('../public/font/Druk-Bold-Trial\ \(1\).otf') format('truetype');
 }
 
 /* global style  */
@@ -45,10 +45,10 @@
 
   /* font  */
 
-  --drukBoldTrial: "DrukBoldTrial";
-  --monasansLightNarrow: "MonaSansLightNarrow";
-  --monaSansLight: "MonaSansLight";
-  --monaSansBold: "MonaSansBold";
+  --drukBoldTrial: 'DrukBoldTrial';
+  --monasansLightNarrow: 'MonaSansLightNarrow';
+  --monaSansLight: 'MonaSansLight';
+  --monaSansBold: 'MonaSansBold';
 }
 
 * {
@@ -60,6 +60,7 @@
 body {
   overflow-x: hidden;
   background: #232835;
+  color: var(--darkWhiteColor);
 }
 
 /* smooth scrool snap  ------------------------------------------*/
@@ -77,26 +78,15 @@ section {
   scroll-snap-align: start;
 }
 
-/* lenis scrool css setup  ------------------------------------------*/
-
-html.lenis {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
+#motto,
+#service1,
+#service2,
+#service3,
+#booking {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: auto;
 }
 
 /* navbar section */
@@ -106,7 +96,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   min-height: 10vh;
   padding: 0 5%;
   z-index: 20;
@@ -118,25 +108,25 @@ nav {
 }
 
 .logo-navbar {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: normal;
   transform: translateX(-100%);
   transform-origin: left;
   opacity: 0;
 }
 
 .logo-navbar a {
-  font-size: calc(0.3rem + 1vw);
+  font-size: calc(1rem + 0.5vw);
   color: var(--darkWhiteColor);
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
 }
 
 .menu-navbar {
   display: flex;
   gap: 0 2rem;
   padding: 1rem 3rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-style: normal;
 }
@@ -149,7 +139,7 @@ nav {
 }
 
 .menu-navbar li a {
-  font-size: calc(0.7rem + 0.5vw);
+  font-size: calc(1rem + 0.5vw);
   color: var(--darkWhiteColor);
   text-decoration: none;
 }
@@ -171,8 +161,8 @@ nav {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .background-video {
@@ -184,7 +174,7 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 .main-home {
@@ -199,7 +189,7 @@ nav {
   align-items: center;
   text-align: center;
   color: var(--darkWhiteColor);
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .main-title-mask,
@@ -212,31 +202,30 @@ nav {
 .main-home h1 {
   font-family: var(--drukBoldTrial);
   color: #d5d6b7;
-  font-size: calc(5rem + 1vw);
+  font-size: calc(6rem + 1vw);
   transform: translateY(50%);
   transform-origin: top;
   opacity: 0;
 }
 
 .main-home p {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: calc(0.6rem + 0.5vw);
+  font-size: calc(1rem + 0.5vw);
+  line-height: 3rem;
   transform: translateY(100%);
   transform-origin: bottom;
   opacity: 0;
-  line-height: 3rem;
 }
 
 .main-home button {
-  margin-top: 2rem;
   padding: 1rem 3rem;
   background: none;
+  color: var(--darkWhiteColor);
   font-size: calc(1rem + 0.5vw);
   cursor: pointer;
-  color: var(--darkWhiteColor);
   border-radius: 1rem;
   border: 2px solid #d5d6b7;
   transform-origin: center;
@@ -245,15 +234,7 @@ nav {
 
 /* motto sections */
 
-#motto {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  color: var(--darkWhiteColor);
-}
-
 .motto-container {
-  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -262,9 +243,10 @@ nav {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  place-content: center;
   width: 100%;
   height: 100%;
-  padding: 10rem 5% 0 5%;
 }
 
 .grid-1-main-title {
@@ -272,14 +254,12 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem 0;
-  width: 100%;
-  height: 100%;
+  gap: 2rem;
 }
 
 .grid-1-main-title h1 {
-  font-size: calc(2rem + 1vw);
-  font-family: "Poppins", sans-serif;
+  font-size: calc(3rem + 0.5vw);
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #d5d6b7;
@@ -289,11 +269,11 @@ nav {
 }
 
 .grid-1-main-title p {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: calc(0.6rem + 0.5vw);
+  font-size: calc(1rem + 0.5vw);
   line-height: 3rem;
   text-align: center;
   transform: translateY(0);
@@ -337,15 +317,15 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 4rem 0;
-  padding: 5rem;
+  gap: 5rem;
+  padding: 0 5rem;
   width: 100%;
   height: 100%;
 }
 
 .grid-2-discount p {
-  font-size: calc(0.6rem + 0.5vw);
-  font-family: "Montserrat", sans-serif;
+  font-size: calc(1rem + 0.5vw);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 3rem;
@@ -355,8 +335,8 @@ nav {
 }
 
 .grid-2-discount h1 {
-  font-size: calc(1.5rem + 1vw);
-  font-family: "Poppins", sans-serif;
+  font-size: calc(2rem + 0.5vw);
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-style: normal;
   color: #d5d6b7;
@@ -367,7 +347,7 @@ nav {
 
 .get-discount-overlay {
   display: flex;
-  gap: 0 1rem;
+  gap: 1rem;
 }
 
 .line-discount {
@@ -390,16 +370,6 @@ nav {
 
 /* service  */
 
-#service1,
-#service2,
-#service3 {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  color: var(--darkWhiteColor);
-  padding: 5%;
-}
-
 .service-container1,
 .service-container2,
 .service-container3 {
@@ -419,7 +389,7 @@ nav {
   justify-content: center;
   align-items: center;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .service-1-image,
@@ -435,8 +405,52 @@ nav {
 .service-2-description,
 .service-3-description {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   padding: 0 5rem;
+  gap: 5rem;
   flex: 1 1 0%;
+}
+
+.service-1 img,
+.service-2 img,
+.service-3 img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-1 h1,
+.service-2 h1,
+.service-3 h1 {
+  color: #d5d6b7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(3rem + 0.5vw);
+  transform: translateY(0);
+  transform-origin: right;
+  opacity: 1;
+}
+
+.service-1 p,
+.service-2 p,
+.service-3 p {
+  color: var(--darkWhiteColor);
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(1rem + 0.5vw);
+  line-height: 3rem;
+  transform: translateY(0);
+  transform-origin: top;
+  opacity: 1;
 }
 
 .service-1-description button,
@@ -453,60 +467,12 @@ nav {
   transform-origin: center;
 }
 
-.service-1 img,
-.service-2 img,
-.service-3 img {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.service-1 h1,
-.service-2 h1,
-.service-3 h1 {
-  color: #d5d6b7;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(2rem + 1vw);
-  transform: translateY(0);
-  transform-origin: right;
-  opacity: 1;
-}
-
-.service-1 p,
-.service-2 p,
-.service-3 p {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: calc(0.6rem + 0.5vw);
-  line-height: 3rem;
-  padding: 2rem 0;
-  transform: translateY(0);
-  transform-origin: top;
-  opacity: 1;
-}
-
 /* hero sections */
-
-#booking {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  color: var(--darkWhiteColor);
-}
 
 .main-booking {
   display: flex;
   height: 100%;
   width: 100%;
-  padding: 10% 5%;
   gap: 5rem;
 }
 
@@ -514,25 +480,25 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 5rem;
   flex: 1 1 0%;
 }
 
 .main-booking-title h1 {
   color: #d5d6b7;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: calc(3rem + 1vw);
+  font-size: calc(3rem + 0.5vw);
 }
 
 .main-booking-title p {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: calc(0.6rem + 0.5vw);
+  font-size: calc(1rem + 0.5vw);
   line-height: 3rem;
-  padding: 2rem 0;
 }
 
 .main-booking-title-button {

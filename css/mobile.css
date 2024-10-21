@@ -1,127 +1,53 @@
-/* font used */
+@media (max-width: 1024px) {
+  /* navbar --------------------------------------------------------------- */
 
-@font-face {
-  font-family: "DrukBoldTrial";
-  src: url("../assets/fonts/Druk-Bold-Trial.otf") format("truetype");
-}
+  .menu-navbar li a {
+    font-size: calc(2rem + 1vw);
+  }
 
-/* global style  */
+  .logo-navbar a,
+  .menu-navbar li a {
+    font-size: calc(1.5rem + 0.5vw);
+  }
 
-:root {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  .grid-2-main-title {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
 
-  /* colour */
+  .service-1-description,
+  .service-2-description,
+  .service-3-description {
+    padding: 0 1rem;
+    gap: 2rem;
+  }
 
-  --blackColor: black;
-  --blackvintage: #181d31;
-  --whiteColor: white;
-  --lightWhiteColor: rgb(220, 220, 220);
-  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+  .main-home h1 {
+    font-size: calc(4rem + 1vw);
+  }
 
-  /* font  */
+  .grid-1-main-title h1,
+  .grid-2-discount h1,
+  .service-1 h1,
+  .service-2 h1,
+  .service-3 h1,
+  .main-booking-title h1 {
+    font-size: calc(2rem + 0.5vw);
+  }
 
-  --nelaSlabFont: "NelaSlabMedium";
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-/* lenis scrool css setup  ------------------------------------------*/
-
-html.lenis {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
-
-/* navbar --------------------------------------------------------------- */
-
-.menu-navbar li {
-  padding: 3rem 0;
-}
-
-.menu-navbar li a {
-  font-size: calc(1.5rem + 1vw);
-}
-
-/* hero sections */
-
-.logo-navbar,
-.logo-navbar a {
-  font-size: calc(1rem + 1vw);
-}
-
-/* hero sections */
-
-.main-home {
-  padding: 0 10% 19% 10%;
-}
-
-.main-home h1 {
-  font-size: calc(3rem + 1vw);
-}
-
-.main-home button {
-  font-size: calc(1rem + 0.5vw);
-}
-/* motto sections */
-
-.grid-1-main-title h1 {
-  font-size: calc(2rem + 1vw);
-}
-
-.grid-2-discount {
-  padding: 2rem;
-}
-
-.grid-2-discount h1 {
-  font-size: calc(1rem + 1vw);
-}
-
-/* service  */
-
-.service-1,
-.service-3 {
-  padding: 5rem 1rem;
-  gap: 2rem;
-}
-
-.service-2 {
-  padding: 5rem 1rem;
-  gap: 2rem;
-}
-
-.service-1 h1,
-.service-2 h1,
-.service-3 h1 {
-  font-size: calc(2rem + 1vw);
-}
-
-/* booking sections */
-
-.main-booking-title h1 {
-  font-size: calc(2rem + 1vw);
+  .main-home p,
+  .grid-1-main-title p,
+  .grid-2-discount p,
+  .service-1 p,
+  .service-2 p,
+  .service-3 p,
+  .main-booking-title p,
+  .main-home button,
+  .service-1-description button,
+  .service-2-description button,
+  .service-3-description button,
+  .main-booking-title button {
+    font-size: calc(1rem + 0.5vw);
+    line-height: 2rem;
+  }
 }

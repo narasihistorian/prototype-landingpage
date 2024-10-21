@@ -2,19 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AntaValley by Agung Rosyandi</title>
-
-    <!-- link css ----------------------------------------------------------->
-
-    <link rel="stylesheet" href="./css/fullhd.css" />
-    <link
-      rel="stylesheet"
-      href="./css/desktop.css"
-      media="(max-width: 1280px)"
-    />
-    <link rel="stylesheet" href="./css/tab.css" media="(max-width: 1024px)" />
-    <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 720px)" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="./main.js" defer></script> -->
+    <title>Anta Valley</title>
   </head>
   <body>
     <!-- Navbar -->
@@ -63,11 +55,10 @@
 
     <main class="main-content">
       <section id="home">
-        <!-- main container -->
         <div class="main-home">
           <video class="background-video" autoplay loop muted>
             <source
-              src="./assets/img/camping 2 web legacy.mp4"
+              src="/public/videos/camping 2 web legacy.mp4"
               type="video/mp4"
             />
           </video>
@@ -96,7 +87,7 @@
             <div class="grid-1">
               <div class="grid-1-main-title">
                 <div class="grid-1-main-title-overlay">
-                  <h1>Affordable & The Best Cottage in Indonesia</h1>
+                  <h1>The Best Cottage in Indonesia</h1>
                 </div>
                 <div class="grid-1-main-title-paragraph-overlay">
                   <p>
@@ -109,7 +100,7 @@
               <div class="grid-2-main-title">
                 <video autoplay loop muted>
                   <source
-                    src="./assets/img/camping web legacy.mp4"
+                    src="/public/videos/camping web legacy.mp4"
                     type="video/mp4"
                   />
                 </video>
@@ -142,7 +133,7 @@
         <div class="service-container1">
           <div class="service-1">
             <div class="service-1-image">
-              <img src="./assets/img/feature-01.png" alt="" />
+              <img src="/public/img/feature-01.png" alt="" />
             </div>
             <div class="service-1-description">
               <h1>Hiking & Adventure</h1>
@@ -172,7 +163,7 @@
               <button>Selengkapnya</button>
             </div>
             <div class="service-2-image">
-              <img src="./assets/img/feature-03.png" alt="" />
+              <img src="/public/img/feature-03.png" alt="" />
             </div>
           </div>
         </div>
@@ -182,7 +173,7 @@
         <div class="service-container3">
           <div class="service-3">
             <div class="service-3-image">
-              <img src="./assets/img/feature-02.png" alt="" />
+              <img src="/public/img/feature-02.png" alt="" />
             </div>
             <div class="service-3-description">
               <h1>Relaxing with nature</h1>
@@ -216,18 +207,12 @@
           </div>
           <div class="main-booking-video">
             <video class="background-video-booking" autoplay loop muted>
-              <source src="./assets/img/4.mp4" type="video/mp4" />
+              <source src="/public/videos/4.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
       </section>
     </main>
-
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-    <script src="https://unpkg.com/split-type"></script>
-    <script src="./app.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

@@ -1,226 +1,126 @@
-/* font used */
+@media (max-width: 1024px) {
+  /* navbar --------------------------------------------------------------- */
 
-@font-face {
-  font-family: "DrukBoldTrial";
-  src: url("../assets/fonts/Druk-Bold-Trial.otf") format("truetype");
-}
+  nav {
+    left: 0;
+    width: 100vw;
+  }
 
-/* global style  */
+  /* burger menu ---------------------------------------------------------- */
 
-:root {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
 
-  /* colour */
+  .burger span {
+    padding: 0.1rem 1rem;
+    background: rgb(255, 255, 255);
+    margin: 0.3rem 0rem;
+    display: block;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+  }
 
-  --blackColor: black;
-  --blackvintage: #181d31;
-  --whiteColor: white;
-  --lightWhiteColor: rgb(220, 220, 220);
-  --blackShadow: rgb(0, 0, 0, 0.4) 0px 0px 20px;
+  .menu-navbar {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 24, 24, 0.1);
+    backdrop-filter: blur(50px);
+    transform: scaleY(0);
+    transform-origin: center;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-  /* font  */
+  .menu-navbar li {
+    padding: 5rem 0;
+    border-bottom: 2px solid white;
+    opacity: 1;
+  }
 
-  --nelaSlabFont: "NelaSlabMedium";
-}
+  .menu-navbar li a {
+    font-size: calc(2rem + 1vw);
+    color: rgb(255, 255, 255);
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  /* navbar sections */
 
-body {
-  overflow-x: hidden;
-}
+  .logo-navbar a,
+  .menu-navbar li a {
+    font-size: calc(1.5rem + 0.5vw);
+  }
 
-/* lenis scrool css setup  ------------------------------------------*/
+  /* home sections */
 
-html.lenis {
-  height: auto;
-}
+  .main-home {
+    padding: 0 10% 15% 10%;
+  }
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
+  .main-home h1 {
+    font-size: calc(6rem + 1vw);
+  }
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
+  /* motto sections */
 
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
+  .grid-1-main-title {
+    text-align: center;
+    padding: 0 5%;
+  }
 
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
+  .grid-2-main-title,
+  .service-1,
+  .service-3,
+  .main-booking {
+    flex-direction: column;
+  }
 
-/* navbar --------------------------------------------------------------- */
+  .service-2 {
+    flex-direction: column-reverse;
+  }
 
-nav {
-  left: 0;
-  width: 100vw;
-}
+  .grid-2-discount,
+  .service-1-description,
+  .service-2-description,
+  .service-3-description,
+  .main-booking-title {
+    text-align: center;
+    align-items: center;
+  }
 
-/* burger menu ---------------------------------------------------------- */
+  .grid-2-discount {
+    padding: 5rem 0;
+  }
 
-.burger {
-  position: relative;
-  display: block;
-  cursor: pointer;
-}
+  .grid-1-main-title h1,
+  .grid-2-discount h1,
+  .service-1 h1,
+  .service-2 h1,
+  .service-3 h1,
+  .main-booking-title h1 {
+    font-size: calc(4rem + 0.5vw);
+  }
 
-.burger span {
-  padding: 0.1rem 1rem;
-  background: rgb(255, 255, 255);
-  margin: 0.3rem 0rem;
-  display: block;
-  transition: all 0.5s ease;
-  width: 100%;
-  height: 100%;
-}
-
-.menu-navbar {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(30, 24, 24, 0.1);
-  backdrop-filter: blur(50px);
-  transform: scaleY(0);
-  transform-origin: center;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-navbar li {
-  padding: 5rem 0;
-  border-bottom: 2px solid white;
-  opacity: 1;
-}
-
-.menu-navbar li a {
-  font-size: calc(2rem + 1vw);
-  color: rgb(255, 255, 255);
-}
-
-/* navbar sections */
-
-.logo-navbar,
-.logo-navbar a {
-  font-size: calc(1.5rem + 1vw);
-}
-
-/* home sections */
-
-.main-home {
-  padding: 0 10% 15% 10%;
-}
-
-.main-home h1 {
-  font-size: calc(4rem + 1vw);
-}
-
-.main-home p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.main-home button {
-  font-size: calc(1rem + 0.5vw);
-}
-
-/* motto sections */
-
-.grid-1-main-title {
-  text-align: center;
-  padding: 0 5%;
-}
-
-.grid-2-main-title {
-  flex-direction: column;
-}
-
-.grid-1-main-title h1 {
-  font-size: calc(1.5rem + 1vw);
-}
-
-.grid-1-main-title p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.grid-2-discount p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.grid-2-discount h1 {
-  font-size: calc(1rem + 1vw);
-}
-
-/* service  */
-
-.service-1,
-.service-3 {
-  flex-direction: column;
-  padding: 10rem;
-}
-
-.service-2 {
-  flex-direction: column-reverse;
-  padding: 10rem;
-}
-
-.service-1-description,
-.service-2-description,
-.service-3-description {
-  text-align: center;
-  padding: 0 3rem;
-}
-
-.service-1-image,
-.service-2-image,
-.service-3-image {
-  width: 100%;
-}
-
-.service-1 h1,
-.service-2 h1,
-.service-3 h1 {
-  font-size: calc(2rem + 1vw);
-}
-
-.service-1 p,
-.service-2 p,
-.service-3 p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.service-1-description button,
-.service-2-description button,
-.service-3-description button {
-  font-size: calc(1rem + 0.5vw);
-}
-
-/* booking sections */
-
-.main-booking {
-  display: flex;
-  flex-direction: column;
-}
-
-.main-booking-title h1 {
-  font-size: calc(2.5rem + 1vw);
-}
-
-.main-booking-title p {
-  font-size: calc(1rem + 0.5vw);
-}
-
-.main-booking-title button {
-  padding: 1rem 3rem;
-  font-size: calc(1rem + 0.5vw);
+  .main-home p,
+  .grid-1-main-title p,
+  .grid-2-discount p,
+  .service-1 p,
+  .service-2 p,
+  .service-3 p,
+  .main-booking-title p,
+  .main-home button,
+  .service-1-description button,
+  .service-2-description button,
+  .service-3-description button,
+  .main-booking-title button {
+    font-size: calc(1.5rem + 0.5vw);
+    line-height: 3rem;
+  }
 }

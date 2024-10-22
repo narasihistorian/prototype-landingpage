@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "DrukBoldTrial";
-  src: url("/font/Druk-Bold-Trial\ \(1\).otf") format("truetype");
+  src: url("@DrukFont") format("truetype");
 }
 
 /* global style  */

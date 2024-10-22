@@ -56,8 +56,28 @@ const navbarBurger = () => {
   });
 };
 
+// smooth scrool -------------------------------------------
+
+const smoothScroolSnap = () => {
+  // smooth scrool ---------------------------------------------------
+
+  const container = document.querySelector(".main-content");
+  const items = document.querySelectorAll("section");
+
+  container.addEventListener("wheel", (event) => {
+    event.preventDefault();
+    const delta = event.deltaY;
+
+    container.scrollBy({
+      top: delta,
+      behavior: "smooth",
+    });
+  });
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   navbarBurger();
+  smoothScroolSnap();
 });
 
 // matchmedia responsive --------------------------------------------------
@@ -73,38 +93,7 @@ matchMediaResponsive.add(
     console.log(context.conditions);
     const { isDesktop, isMobile } = context.conditions;
 
-    // smooth scrool ---------------------------------------------------
-
-    const container = document.querySelector(".main-content");
-    const items = document.querySelectorAll("section");
-
-    container.addEventListener("wheel", (event) => {
-      event.preventDefault();
-      const delta = event.deltaY;
-
-      container.scrollBy({
-        top: delta,
-        behavior: "smooth",
-      });
-    });
-
-    // navbar closed ---------------------------------------------------------------
-
-    const showAnim = gsap
-      .from("nav", {
-        yPercent: -100,
-        paused: true,
-        duration: 0.2,
-      })
-      .progress(1);
-
-    ScrollTrigger.create({
-      start: "top top",
-      end: 99999,
-      onUpdate: (self) => {
-        self.direction === -1 ? showAnim.play() : showAnim.reverse();
-      },
-    });
+    smoothScroolSnap();
 
     // home opening animation ---------------------------------------------------------------
 

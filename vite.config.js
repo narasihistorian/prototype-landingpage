@@ -5,7 +5,7 @@ export default defineConfig({
   base: "/",
   resolve: {
     alias: {
-      "@DrukFont": path.resolve(__dirname, "./public/font/druk-font.otf"),
+      "@DrukFont": path.resolve(__dirname, "/font/druk-font.otf"),
     },
     extensions: [".js", ".ts", ".tsx", ".jsx"],
   },

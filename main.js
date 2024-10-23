@@ -1,3 +1,9 @@
+import "./css/fullhd.css"
+import "./css/desktop.css"
+import "./css/tab.css"
+import "./css/mobile.css"
+
+
 import { gsap } from "gsap";
 import SplitType from "split-type";
 
